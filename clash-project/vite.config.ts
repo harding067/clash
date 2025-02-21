@@ -13,6 +13,10 @@ export default defineConfig({
     vueJsx(),
     vueDevTools(),
   ],
+  // 供 network 访问
+  server: {
+    host: '0.0.0.0', // 监听所有地址
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
